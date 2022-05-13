@@ -17,13 +17,13 @@ args = parser.parse_args()
 
 if args.n is None:
     pw_create = pw.Password()
-    password = pw_create.create_password(args.n)
+    password = pw_create.create_password(8)
     print(password)
 elif args.n < 8:
     print('At least 8 characters needed')
 elif args.n > 32:
     print('At least 8 characters needed')
 else:
-    pw_create = pw.clsPassword()
+    pw_create = pw.Password()
     password = pw_create.create_password(args.n)
     print(password)
